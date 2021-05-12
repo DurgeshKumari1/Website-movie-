@@ -1,0 +1,437 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+@import url('http://fonts.cdnfonts.com/css/magic-school-one');
+@import url('http://fonts.cdnfonts.com/css/harrypotter7');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	background-image: linear-gradient(60deg, #add3ff 0%, #333333 100%);
+	
+}
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+
+
+#header .nav-bar .brand a {
+	text-decoration: none;
+}
+
+.container {
+	min-height: 50vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: auto;
+}
+
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	text-align: center;
+}
+.section-title span {
+	color: crimson;
+}
+
+.brand h1 {
+	position: relative;
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+.brand h1 span {
+	color: crimson;
+}
+
+/* Header section */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+	margin:auto;
+	font-family: 'Magic School Two', sans-serif;
+}
+#header .header {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: .3s ease background-color;
+}
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#header .nav-list ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: .5s ease left;
+}
+#header .nav-list ul.active {
+	left: 0%;
+}
+#header .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: .2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#header .nav-list ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: .3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+	color: crimson;
+	/* color: rgb(99, 2, 2); */
+}
+#header .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(.8);
+	margin-right: 20px;
+}
+#header .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: .3s ease;
+	transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+	top: 8px;
+}
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+	bottom: 0;
+}
+#header .hamburger.active .bar::after {
+	top: 0;
+}
+
+@keyframes hamburger_puls {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+
+/* End Header section */
+
+/* Hero Section */
+#hero {
+	background-image: url(./T1.jpg);
+	background-size: cover;
+	background-position: bottom; 
+	overflow: hidden;
+	text-align: right;
+	padding: 0px;
+    height: 100vh;
+	width:100%;
+}
+
+#hero h1{
+	font-style: italic;
+	position: absolute;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+    padding-bottom: 10px;
+    top: 50%;
+	left: 0px;
+	transform: translateY(-50%); 
+    width:100%;
+    text-align: right;
+    color:rgb(255, 255, 255);
+    font-size: 50em;
+    letter-spacing: 0.1em;
+	z-index: 1;	
+	font-family: 'Magic School Two', sans-serif;
+
+}
+
+
+#hero h1 span{
+	opacity: 0px;
+    display:inline-block;
+    animation: animate 5s linear forwards;
+}
+
+@keyframes animate 
+{
+   0% {
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(5px);
+    }
+    100% {
+        opacity: 1;
+        ransform: rotateY(0deg);
+        filter: blur(0px);
+    }
+
+}
+
+/* End Hero Section */
+
+
+/* Trailer Section */
+#trailer .trailers{
+	margin-top: 0px;
+	text-align: center;
+	padding-top:0px;
+}
+
+
+.trailer-top .section-title {
+	margin-top: 0px;
+	font-size: 5rem;
+	font-weight: 600;
+	color: rgb(255, 255, 255);
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1rem;
+	text-align: center;
+    font-family: 'HarryPotter7', sans-serif;
+	
+}
+.trailer-top .section-title span {
+	color: rgb(129, 21, 21);
+	/* color: rgb(99, 2, 2); */
+}
+
+#trailer .trailer-top {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+/* ----- */
+
+ .items{
+	width:40%;
+	display:flex;
+	padding:4px;
+	margin-bottom:0px;
+	line-height:1.42857143;
+	background-color:#fff;
+	border:1px solid #ddd;
+	border-radius:4px;
+	float:left;
+	margin-left:1%;
+} 
+.thumbnail{
+	display:flex;
+	flex-direction:column;
+	max-width:100%;
+	height:250px;
+}
+
+.caption{
+	color:rgb(255, 255, 255);
+	padding:0px 10px 10px;
+	font-weight:bold;
+	text-align:center;
+    font-family: 'HarryPotter7', sans-serif;
+}
+
+#trailer .container .items a{
+	text-decoration: none;
+}
+
+#trailer .items {
+	flex-basis: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: row;
+	padding: 5px;
+	border-radius: 10px;
+	background-size: cover;
+	margin-top: 0%;
+	margin-bottom: 0%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+#trailer .items::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #d8ebff 100%);
+	opacity: .9;
+	z-index: -1;
+}
+ /* Trailer section ends */
+
+
+ /* Footer */
+#footer {
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#footer .footer {
+	min-height: 100px;
+	flex-direction: column;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+#footer .social-icon {
+	display: flex;
+	margin-bottom: 30px;
+}
+#footer .social-item {
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+}
+#footer .social-item img {
+	filter: grayscale(1);
+	transition: .3s ease filter;
+}
+#footer .social-item:hover img {
+	filter: grayscale(0);
+}
+#footer p {
+	color: white;
+	font-size: 1.3rem;
+}
+
+#footer img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+/* End Footer */
+
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 500px) {
+	/* (min-width: 768px) */
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 6rem;
+	}
+
+	/* Hero */
+	#hero h1 {
+		font-size: 7rem;
+		font-style: italic;
+	}
+
+	/* Services Section */
+	#trailer .items {
+		flex-basis: 45%;
+		margin: 2.5%;
+	}
+	/* End Services Section */
+}
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+	/* header */
+	#header .hamburger {
+		display: none;
+	}
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 1.8rem;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+    /* End of header section */
+
+	#trailer .items {
+		flex-basis: 40%;
+		margin: 1%;
+	}
+}

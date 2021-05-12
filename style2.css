@@ -1,0 +1,133 @@
+/* Cast section starts */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.c_banner img{
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.about_cast{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+}
+
+.card{
+    position: relative;
+    margin:100px;
+    width: 300px;
+    height:400px;
+    background-image: linear-gradient(60deg, #ffffff 0%, #485563 100%);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 20px 40px rgb(0, 0, 0, 0.7);
+    transition: 1s;
+}
+
+.card:hover{
+    transform: translateX(50%);
+}
+
+.card .imgbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    background: #000;
+    transition: 1s;
+    box-shadow: 10px 20px 40px rgb(0, 0, 0, 0.7);
+}
+
+.card:hover .imgbox{
+    transform: rotateY(-180deg);
+}
+
+.card .imgbox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.card .imgbox img:nth-child(2){
+    transform: rotateY(180deg);
+}
+
+.card .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .details .content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'HarryPotter7', sans-serif;
+}
+
+.card .details .content h1{
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.5em;
+}
+
+.card .details .content h1 span{
+    color:rgb(6, 62, 134);
+    font-size: 0.8em;
+}
+
+.card .details .content .social-icons{
+    position:relative;
+    display:flex;
+    margin-top: 10px;
+}
+
+.card .details .content .social-icons a{
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    filter: grayscale(1);
+	transition: .3s ease filter;
+}
+
+.card .details .content .social-icons a:hover{
+    filter: grayscale(0);
+
+}
+
+/* Cast section ends */
+
+
+/* Media Query for tablet  */
+
+@media only screen and (min-width: 600px) {
+	
+    #cast .content h1{
+        font-size: 2rem;
+    }
+}

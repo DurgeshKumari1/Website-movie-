@@ -1,0 +1,208 @@
+@import url('http://fonts.cdnfonts.com/css/andallan');
+@import url('http://fonts.cdnfonts.com/css/harrypotter7');
+@import url('http://fonts.cdnfonts.com/css/magic-school-one');
+                
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+.d_banner img{
+    background-size: cover;
+    background-position: left top;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.details-container{
+    position: relative;
+    width:1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px ;
+}
+
+.details-container .details-card{
+    position: relative;
+    align-items: center;
+    max-width: 100%;
+    height:320px;
+    background-image: linear-gradient(60deg, #ffffff 0%, #485563 100%);
+    margin:50px 20px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0,0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.details-container .details-card:hover{
+    height:800px;
+}
+
+.details-container .details-card .details-imgbox{
+    position:relative;
+    max-width: 260px;
+    height:260px;
+    top: -60px;
+    left: 0x;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0,0.2);
+}
+
+.details-container .details-card .details-imgbox img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 4px;
+}
+
+.details-container .details-card .details-content{
+    position: relative;
+    margin-top: -140px;
+    padding:10px 15px;
+    text-align:justify;
+    color:black;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    font-size: 15px;
+}
+
+
+.details-container .details-card .details-content p{
+    font-size: 18px;
+    font-weight: 100px;
+    font-family:'Times New Roman', Times, serif;
+    word-spacing: 0.2em;                                           
+
+}
+
+
+.details-content h1{
+    text-align:center;
+    padding-bottom: 10px;
+    font-size: 30px;
+    font-family: 'Magic School Two', sans-serif;
+}
+
+.details-content h1 a{
+    color:rgb(88, 6, 6);
+    text-decoration: none;
+}
+
+.details-content h1 a:hover{
+    color:rgb(175, 51, 51);
+}
+
+
+.details-container .details-card:hover .details-content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -50px;
+    transition-delay: 0.3s;
+}
+
+/* production */
+
+.production h1{
+    text-align:center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 80px;
+    letter-spacing: 0.1em; 
+    font-family: 'Magic School Two', sans-serif;
+    color: rgb(255, 255, 255);
+    transform: scale(1.02);
+    text-shadow: 2px 2px 12px rgba(0, 0, 0,0.7), -1px -1px 8px rgba(0, 0, 0,0);
+}
+
+.production h1 span{
+    color:crimson;
+}
+
+/* table start */
+
+table{
+    position:relative;
+    left: 50%;
+    margin-top:400px;
+    transform: translate(-50%,-50%);
+    border-collapse: collapse;
+    width:90%;
+    height:100%;
+    border:1px solid rgb(111, 154, 218);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0,0.7), -1px -1px 8px rgba(0, 0, 0,0);
+}
+
+tr{
+    transition: all .2s ease-in;
+}
+
+th,td{
+    padding:12px;
+    text-align: left;
+    border-bottom: 1px solid rgb(25, 97, 131);
+    font-size:18px;  
+}
+
+td a{
+    text-decoration:none;
+    font-size: 18px;
+    color: rgb(40, 41, 131);
+}
+
+#table-header{
+    background-color:rgb(25, 97, 131);
+    color:#ffffff;
+    transform: scale(1);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0,1), -1px -1px 8px rgba(0, 0, 0,0);
+}
+
+tr:hover{
+    background-color: rgb(114, 167, 192);
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0,1), -1px -1px 8px rgba(0, 0, 0,0);
+}
+
+/* table ends */
+
+/* media query for table */
+
+@media only screen and (max-width: 768px){
+    
+    table{
+        width:90%;
+        margin-top: 600px;
+    }   
+}
+
+.details-container .details-card:hover{
+    height:100%;
+}
+
+.production h1{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    table{
+        width:90%;
+        margin-top: 600px;
+    }   
+}
+
