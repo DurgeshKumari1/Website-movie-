@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style5.css">
+
+  <!---Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+  <link href="http://fonts.cdnfonts.com/css/magic-school-one" rel="stylesheet">
+                
+
+  <title>HARRY POTTER Series</title>
+</head>
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="https://en.wikipedia.org/wiki/Harry_Potter_(film_series)" target="_blank"><h1 ><span>H</span>ARRY <span>P</span>OTTER</h1></a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger"><div class="bar"></div></div>
+          <ul>
+            <li><a href="./index.html" data-after="Home">Home</a></li>
+            <li><a href="./cast.html" data-after="Cast">Cast</a></li>
+            <li><a href="./details.html" data-after="Details">Details</a></li>
+            <li><a href="./signup.html" data-after="Register">Register</a></li>
+            <li><a href="#footer" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- login form -->
+  
+  <div id='login-form'class='login-page'>
+    <div class="form-box">
+        <h3>Login to Watch Movies</h3>
+        <div class='button-box'>
+            <div id='btn'></div>
+            <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+            <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+
+        </div>
+        <form id='login' class='input-group-login'>
+            <input type='text'class='input-field'placeholder='Email Id' required >
+            <input type='password'class='input-field'placeholder='Enter Password' required> <br> <br>
+            <input type='checkbox'class='check-box'> <span>  Remember Password</span><br> <br>
+            <button type='submit'class='submit-btn'>Log in</button>
+        </form>
+        
+        <form id='register' class='input-group-register'>
+            <input type='text'class='input-field'placeholder='First Name' required>
+            <input type='text'class='input-field'placeholder='Last Name ' required>
+            <input type='email'class='input-field'placeholder='Email Id' required>
+            <input type='password'class='input-field'placeholder='Enter Password' required>
+            <input type='password'class='input-field'placeholder='Confirm Password'  required> <br> <br>
+            <input type='checkbox'class='check-box'><span>  I agree to the terms and conditions</span> <br> <br>
+            <button type='submit'class='submit-btn'>Register</button>
+        </form>
+    </div>
+</div>
+
+<!-- script coding -->
+<script>
+    var x=document.getElementById('login');
+    var y=document.getElementById('register');
+    var z=document.getElementById('btn');
+    function register()
+    {
+        x.style.left='-400px';
+        y.style.left='50px';
+        z.style.left='110px';
+    }
+    function login()
+    {
+        x.style.left='50px';
+        y.style.left='450px';
+        z.style.left='0px';
+    }
+</script>
+<!-- script coding ends -->
+<!-- login form end -->
+
+
+<!-- footer starts -->
+<section id="footer">
+    <div class="footer container">
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="https://www.facebook.com/durgesh.kumari.125" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.instagram.com/kumaridurgesh917/" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="https://mail.google.com/" target="_blank"><img src="https://img.icons8.com/bubbles/50/000000/apple-mail.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.linkedin.com/in/durgesh-kumari-44387317a/" target="_blank"><img src="https://img.icons8.com/bubbles/50/000000/linkedin.png"/></a>
+        </div>
+      </div>
+      <p>Copyright © 2021 Durgesh Kumari. All rights reserved | Contact us - +91 9000112211</p>
+    </div>
+  </section>
+<!-- footer ends -->
+
+<script src="JavaScript.js"></script>
+
+  </body>
+  </html>
